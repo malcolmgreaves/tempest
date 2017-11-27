@@ -25,6 +25,12 @@ scalacOptions ++= Seq(
   "-Ywarn-unused"
 )
 
+resolvers ++= Seq(
+  // sonatype, maven central
+  "Sonatype Releases" at "https://oss.sonatype.org/content/repositories/releases/",
+  "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
+)
+
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
 test in assembly := {} // Disable tests during assembly
