@@ -1,3 +1,4 @@
+# Project specific
 src/gen/
 
 tempest_dist*
@@ -8,15 +9,15 @@ python-package/__init__.py
 python-package/dist/
 python-package/tempest_client.pyc
 python-package/tempest_graph.egg-info/
+python-package/output_python_setup
 
 ruby-package/lib/gen/
-ruby-package/tempest_db-0.10.0.gem
+ruby-package/tempest_db-*
 
+# sbt/scala specific
+.cache
 *.class
 *.log
-
-# sbt specific
-.cache
 .history
 .lib/
 dist/*
@@ -26,7 +27,13 @@ src_managed/
 project/boot/
 project/plugins/project/
 
+# Intellij specific
+.idea*
+
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
-.idea
+
+# misc
+*.swp
+
