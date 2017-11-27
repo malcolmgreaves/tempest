@@ -6,8 +6,8 @@ mkdir -p ruby-package/lib/gen/
 mkdir -p python-package/tempest_db
 
 rm -rf $JAVA_GENERATOR_OUTPUT/* # Remove any old versions
-rm -r ruby-package/lib/gen/*
-rm -r python-package/tempest_db # Remove any old versions
+rm -rf ruby-package/lib/gen/*
+rm -rf python-package/tempest_db # Remove any old versions
 
 thrift -out $JAVA_GENERATOR_OUTPUT -gen java src/main/thrift/tempest.thrift
 thrift -out ruby-package/lib/gen -gen rb src/main/thrift/tempest.thrift
